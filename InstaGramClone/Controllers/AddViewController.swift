@@ -125,6 +125,7 @@ extension AddViewController:UIImagePickerControllerDelegate{
     }
 }
 
+// There is no need to declare this Delegate method here. 
 extension AddViewController: UISideMenuNavigationControllerDelegate {
     func sideMenuWillAppear(menu: UISideMenuNavigationController, animated: Bool) {
         print("SideMenu Appearing! (animated: \(animated))")
