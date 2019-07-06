@@ -48,10 +48,15 @@ extension SlideBarMenuViewController:UITableViewDataSource{
 extension SlideBarMenuViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
+            //Rather than pushViewContoller You can dismiss the current SlideBarMenuviewController
+
             let vcName = identities[indexPath.row]
             let viewcontroller = storyboard?.instantiateViewController(withIdentifier: vcName)
             self.navigationController?.pushViewController(viewcontroller!, animated: true)
-        }else if indexPath.row == 1 {
+        }
+       //Nothing will happen when user click on share 
+
+        else if indexPath.row == 1 {
             
         }else if indexPath.row == 2 {
             do{
